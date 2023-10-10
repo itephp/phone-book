@@ -1,0 +1,22 @@
+POST http://localhost:8080/v1/persons/
+Content-Type: application/json
+
+{
+  "name": "test",
+  "phone": "777999777",
+  "group": "System"
+}
+
+###
+
+GET http://localhost:8080/v1/persons/
+
+###
+
+GET http://localhost:8080/v1/persons/test
+
+###
+
+DELETE http://localhost:8080/v1/persons/test
+
+###

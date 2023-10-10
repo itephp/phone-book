@@ -1,0 +1,18 @@
+version: "3.4"
+services:
+  phonebook:
+    build:
+      context: .
+      target: development
+    links:
+      - pgsql
+    ports:
+      - "3000:8080"
+  pgsql:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=db
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "3160:5432"
